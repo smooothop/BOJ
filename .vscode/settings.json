@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "mspbase.h": "c",
-        "activation.h": "c",
-        "stdio.h": "c"
-    }
-}
