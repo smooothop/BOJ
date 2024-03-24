@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
     int alpha_count[26] = {0};
-    char word[100];
+    char word[1000];
     int max = 0; 
     int num = 0;
     bool isDuplicate = false; 
@@ -22,7 +22,7 @@ int main() {
                 alpha_count[j]++;
             }
         }
-    }
+    } 
     for (int i = 0; i < 26; i++) {
         if (alpha_count[i] > max) {
             max = alpha_count[i];
@@ -32,7 +32,7 @@ int main() {
             isDuplicate = true; 
         }
     }
-    if (isDuplicate || max == 0) { 
+    if (isDuplicate) { 
         cout << "?" << endl;
     } else {
         cout << alphabet[num] << endl; 
