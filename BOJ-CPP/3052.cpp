@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    int num[10];
+    int num[10] = {0};
     int cnt = 0;
 
     for(int i = 0; i < 10; i++){
@@ -13,20 +13,17 @@ int main(){
     for(int i = 0; i < 10; i++){
         for(int j = i+1; j < 10; j++){
             if(num[i] == num[j]){
-                num[j] = '\0';
+                num[j] = -1;
             }
         }
     }
     for(int i = 0; i < 10; i++){
-        if(num[i] != '\0'){
+        if(num[i] != -1){
             cnt++;
         }
+        
     }
     cout << cnt;
-
-
-
-
 
     return 0;
 }
