@@ -7,6 +7,10 @@ element stack[MAX_STACK_SIZE];
 int top = -1;
 
 void push(element item){
+    if (top >= MAX_STACK_SIZE - 1) {
+        printf("Stack Overflow\n");
+        return;
+    }
     stack[++top] = item;
 }
 
@@ -40,31 +44,30 @@ int main(){
             push(item);
         }
         else if(input == 2){
-            if(is_empty){
-                printf("-1\n");
+            if(is_empty()){
+                printf("-1");
             }
             else{
                 print_n_pop();
             }
         }
         else if(input == 3){
-            printf("%d\n", top+1);
+            printf("%d", top+1);
         }
         else if(input == 4){
-            if(is_empty){
-                printf("1\n");
+            if(is_empty()){
+                printf("1");
             }
             else{
-                printf("0\n");
+                printf("0");
             }
         }
         else if(input == 5){
-            if(!is_empty){
-                printf("-1\n");
+            if(is_empty()){
+                printf("-1");
             }
             else{
-                printf("%d\n", stack[top]);
-            }
+                printf("%d", stack[top]);            }
         }
         i++;
     }
