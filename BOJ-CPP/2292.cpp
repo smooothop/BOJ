@@ -6,21 +6,15 @@ int main() {
 
     long n;
     int ser = 1;
-    long count = 1;
     int wall_count = 1;
-
 
     cin >> n;
 
-    while(count != n+1) {        
-
+    while(true) {        
         ser = 3 * pow(wall_count, 2) - 3 * wall_count + 1;
-
-        if((count - 1) % ser == 0) {
-            wall_count++;
-        }
-        
-        count++;
+        if(ser >= n) break;
+                
+        wall_count++;
     }
     cout << wall_count;
 
