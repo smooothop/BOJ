@@ -41,5 +41,5 @@ int main () {
     milliseconds ms = duration_cast<milliseconds>(end_time - start_time);
     seconds sec = duration_cast<seconds>(end_time - start_time);
 
-    cout << endl << ms.count() << "ms" << endl << sec.count() << "s";
+    // cout << endl << ms.count() << "ms" << endl << sec.count() << "s";
 }
